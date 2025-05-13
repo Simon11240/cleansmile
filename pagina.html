@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clean Smile - Your Perfect Smile Starts Here</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F9BE0',secondary:'#F8A978'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.testimonial-card {
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 30px;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #e5e7eb;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+border-color: #4F9BE0;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #4F9BE0;
+border-color: #4F9BE0;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header/Navigation -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<a href="#" class="flex items-center">
+<span class="text-3xl font-['Pacifico'] text-primary">Clean Smile</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-gray-900 font-medium hover:text-primary transition"></a>
+<a href="#" class="text-gray-600 hover:text-primary transition"></a>
+<a href="#" class="text-gray-600 hover:text-primary transition"></a>
+<a href="#" class="text-gray-600 hover:text-primary transition"></a>
+</nav>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-xl"></i>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-24 relative overflow-hidden">
+<div style="background-image: url('https://readdy.ai/api/search-image?query=professional%20dental%20office%20with%20beautiful%20white%20teeth%20on%20the%20right%20side%2C%20clean%20modern%20dental%20clinic%2C%20bright%20and%20airy%20atmosphere%2C%20dental%20equipment%2C%20comfortable%20chairs%2C%20blue%20accents%2C%20professional%20lighting%2C%20minimalist%20design%2C%20high-end%20medical%20facility&width=1920&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;" class="w-full h-[600px] relative">
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+<div class="container mx-auto px-6 h-full flex items-center">
+<div class="w-full md:w-1/2 z-10">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Your Perfect Smile Starts Here</h1>
+<p class="text-lg text-gray-700 mb-8 max-w-lg">Experience exceptional dental care with our team of experts using the latest technology for a comfortable and effective treatment.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
+Schedule Consultation
+</button>
+<button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition whitespace-nowrap flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</div>
+Call Us
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Dental Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">We provide comprehensive dental care services to help you maintain optimal oral health and achieve the smile you've always wanted.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-brush-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Teeth Cleaning</h3>
+<p class="text-gray-600 mb-6">Professional cleaning to remove plaque and tartar buildup, preventing cavities and gum disease.</p>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-sparkling-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Teeth Whitening</h3>
+<p class="text-gray-600 mb-6">Advanced whitening treatments to remove stains and discoloration for a brighter, more confident smile.</p>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-layout-grid-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Orthodontics</h3>
+<p class="text-gray-600 mb-6">Comprehensive orthodontic solutions including braces and clear aligners to straighten teeth and improve bite.</p>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Learn More
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Clean Smile</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">We combine expertise, technology, and compassionate care to provide you with the best dental experience possible.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Feature 1 -->
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-user-star-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Experienced Team</h3>
+<p class="text-gray-600">Our dentists have over 20 years of combined experience in all aspects of dental care.</p>
+</div>
+<!-- Feature 2 -->
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-microscope-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Advanced Technology</h3>
+<p class="text-gray-600">We utilize the latest dental technologies for precise diagnosis and effective treatments.</p>
+</div>
+<!-- Feature 3 -->
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-heart-pulse-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Patient-Centered Care</h3>
+<p class="text-gray-600">We prioritize your comfort and satisfaction throughout every step of your treatment.</p>
+</div>
+<!-- Feature 4 -->
+<div class="text-center p-6">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-shield-check-line ri-xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Comprehensive Care</h3>
+<p class="text-gray-600">From routine checkups to complex procedures, we provide all the dental services you need.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">What Our Patients Say</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied patients about their experience with Clean Smile Dental Clinic.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="testimonial-card bg-white p-8 rounded-lg">
+<div class="flex mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"I've been coming to Clean Smile for years and have always received exceptional care. Dr. Richardson is thorough, gentle, and truly cares about her patients' well-being."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20smiling%20middle-aged%20woman%20with%20blonde%20hair%2C%20natural%20lighting%2C%20neutral%20background%2C%20friendly%20expression%2C%20business%20casual%20attire&width=60&height=60&seq=2&orientation=squarish" alt="Patient" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-medium text-gray-900">Emily Thompson</h4>
+<p class="text-sm text-gray-500">Patient since 2019</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card bg-white p-8 rounded-lg">
+<div class="flex mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"The teeth whitening treatment I received completely transformed my smile. The staff was professional and made me feel comfortable throughout the entire process."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20smiling%20young%20asian%20man%20with%20dark%20hair%2C%20natural%20lighting%2C%20neutral%20background%2C%20friendly%20expression%2C%20business%20casual%20attire&width=60&height=60&seq=3&orientation=squarish" alt="Patient" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-medium text-gray-900">Michael Chen</h4>
+<p class="text-sm text-gray-500">Patient since 2021</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card bg-white p-8 rounded-lg">
+<div class="flex mb-4">
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"As someone who used to be terrified of dental visits, I can't recommend Clean Smile enough. Their compassionate approach and pain-free treatments have completely changed my perspective."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20smiling%20african%20american%20woman%20with%20natural%20hair%2C%20natural%20lighting%2C%20neutral%20background%2C%20friendly%20expression%2C%20business%20casual%20attire&width=60&height=60&seq=4&orientation=squarish" alt="Patient" class="w-12 h-12 rounded-full object-cover object-top mr-4">
+<div>
+<h4 class="font-medium text-gray-900">Olivia Johnson</h4>
+<p class="text-sm text-gray-500">Patient since 2020</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Have questions or ready to schedule an appointment? Reach out to us today.</p>
+</div>
+<div class="grid grid-cols-1 gap-12">
+<!-- Office Info & Map -->
+<div>
+<div class="bg-white p-8 rounded-lg shadow-sm mb-8">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Office Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-phone-line"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900 mb-1">Phone</h4>
+<p class="text-gray-600">(319) 667-8028</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-mail-line"></i>
+</div>
+</div>
+<div>
+<h4 class="font-medium text-gray-900 mb-1">Email</h4>
+<p class="text-gray-600">lealsimon01@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="inline-block mb-6">
+<span class="text-3xl font-['Pacifico'] text-white">Clean Smile</span>
+</a>
+<p class="text-gray-400 mb-6">Providing exceptional dental care with a focus on patient comfort and satisfaction since 2005.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-twitter-x-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- Services -->
+<div>
+<h4 class="text-lg font-semibold mb-6">Our Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Teeth Cleaning</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Teeth Whitening</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Orthodontics</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Dental Implants</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Root Canal Therapy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Cosmetic Dentistry</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Clean Smile Dental Clinic. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm transition">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const whatsappButtons = document.querySelectorAll('a[href^="https://wa.me"]');
+whatsappButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+gtag('event', 'whatsapp_click', {
+'event_category': 'engagement',
+'event_label': 'WhatsApp Contact Button'
+});
+});
+});
+});
+</script>
+</body>
+</html>
+
+
+
+
